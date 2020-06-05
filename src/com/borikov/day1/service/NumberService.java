@@ -8,14 +8,16 @@ public class NumberService {
     ArithmeticValidation arithmeticValidation = new ArithmeticValidation();
 
     // task 1
-    public void getLastNumberOfSquare(int number) {
+    public int getLastNumberOfSquare(int number) {
         if (arithmeticValidation.isNumberInLimit(number)) {
             int lastNumber = getLastNumber(number);
             int square = (int) Math.pow(lastNumber, 2);
             int lastNumberOfSquare = getLastNumber(square);
             numberPrint.printLastNumberOfSquare(lastNumberOfSquare, number);
+            return lastNumberOfSquare;
         } else {
             numberPrint.printIncorrectValidation();
+            return 0;
         }
     }
 

@@ -7,8 +7,8 @@ public class NumberMain {
         NumberService numberService = new NumberService();
 
 //      task 1 testing
-        int number = -13;
-        numberService.getLastNumberOfSquare(number);
+        int number = 11;
+        System.out.println(numberService.getLastNumberOfSquare(number));
 
 //      task 4 testing
         int a = 1;

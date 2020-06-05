@@ -1,9 +1,9 @@
 package com.borikov.day1.entity;
 
 public class CoordinatePoint {
-    String name;
-    int x;
-    int y;
+    private String name;
+    private int x;
+    private int y;
 
     public CoordinatePoint(String name, int x, int y) {
         this.name = name;
@@ -35,12 +35,15 @@ public class CoordinatePoint {
         this.y = y;
     }
 
+
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "[" +
-                "name='" + name + '\'' +
-                ", x=" + x +
-                ", y=" + y + ']';
+        final StringBuilder sb = new StringBuilder("CoordinatePoint[");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", x=").append(x);
+        sb.append(", y=").append(y);
+        sb.append(']');
+        return sb.toString();
     }
 
     @Override
