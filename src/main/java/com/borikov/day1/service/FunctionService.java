@@ -13,7 +13,7 @@ public class FunctionService {
     // task 8
     public double getCustomFunction(double x) throws IncorrectDataException {
         ArithmeticValidator arithmeticValidator = new ArithmeticValidator();
-        if (arithmeticValidator.isNumberInLimit(x)) {
+        if (!arithmeticValidator.isNumberInLimit(x)) {
             throw new IncorrectDataException();
         }
         double result;
@@ -36,14 +36,20 @@ public class FunctionService {
     // task 10
     public Map<Double, Double> getTangentFunction(double start, double end, double step) throws IncorrectDataException {
         ArithmeticValidator arithmeticValidator = new ArithmeticValidator();
-        if (arithmeticValidator.isNumberBetween(start, end, step)) {
+        if (!arithmeticValidator.isNumberBetween(start, end, step)) {
             throw new IncorrectDataException();
         }
         Map<Double, Double> tangentFunction = new HashMap<>();
         for (double i = start; (i <= end && (start < end && step > 0))
                 || (i >= end && (start > end && step < 0)); i += step) {
-            tangentFunction.put(i, tan(i));
+            double tangent = tan(i);
+            tangentFunction.put(i, getRoundedNumber(tangent));
         }
+
         return tangentFunction;
+    }
+
+    private double getRoundedNumber(double number) {
+        return (int)(number * 100) / 100.;
     }
 }

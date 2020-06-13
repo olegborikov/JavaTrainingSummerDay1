@@ -11,8 +11,8 @@ public class PointService {
     // task 7
     public Point getNearestPoint(Point firstPoint, Point secondPoint) throws IncorrectDataException {
         PointValidator pointValidator = new PointValidator();
-        if (pointValidator.isPointInLimit(firstPoint.getX(), firstPoint.getY())
-                && pointValidator.isPointInLimit(secondPoint.getX(), secondPoint.getY())) {
+        if (!(pointValidator.isPointInLimit(firstPoint.getX(), firstPoint.getY())
+                && pointValidator.isPointInLimit(secondPoint.getX(), secondPoint.getY()))) {
             throw new IncorrectDataException();
         }
         double firstPointDistance =

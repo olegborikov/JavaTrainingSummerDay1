@@ -1,6 +1,6 @@
 package com.borikov.day1.entity;
 
-public enum DaysInMonth {
+public enum Month {
     JANUARY(31),
     FEBRUARY(28),
     MARCH(31),
@@ -16,7 +16,7 @@ public enum DaysInMonth {
 
     private int daysInMonth;
 
-    DaysInMonth(int daysInMonth) {
+    Month(int daysInMonth) {
         this.daysInMonth = daysInMonth;
     }
 

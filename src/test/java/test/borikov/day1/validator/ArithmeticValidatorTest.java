@@ -25,7 +25,7 @@ public class ArithmeticValidatorTest {
     }
 
     @Test(dataProvider = "isNumberPositiveTrueData")
-    public void testIsNumberPositiveTrue(double number) {
+    public void isNumberPositiveTrueTest(double number) {
         boolean actual = arithmeticValidator.isNumberPositive(number);
         assertTrue(actual);
     }
@@ -40,7 +40,7 @@ public class ArithmeticValidatorTest {
     }
 
     @Test(dataProvider = "isNumberPositiveFalseData")
-    public void testIsNumberPositiveFalse(double number) {
+    public void isNumberPositiveFalseTest(double number) {
         boolean actual = arithmeticValidator.isNumberPositive(number);
         assertFalse(actual);
     }
@@ -55,7 +55,7 @@ public class ArithmeticValidatorTest {
     }
 
     @Test(dataProvider = "isLongNumberPositiveTrueData")
-    public void testIsLongNumberPositiveTrue(long number) {
+    public void isLongNumberPositiveTrueTest(long number) {
         boolean actual = arithmeticValidator.isLongNumberPositive(number);
         assertTrue(actual);
     }
@@ -70,7 +70,7 @@ public class ArithmeticValidatorTest {
     }
 
     @Test(dataProvider = "isLongNumberPositiveFalseData")
-    public void testIsLongNumberPositiveFalse(long number) {
+    public void isLongNumberPositiveFalseTest(long number) {
         boolean actual = arithmeticValidator.isLongNumberPositive(number);
         assertFalse(actual);
     }
@@ -85,7 +85,7 @@ public class ArithmeticValidatorTest {
     }
 
     @Test(dataProvider = "isNumberInLimitPositiveData")
-    public void testIsNumberInLimitPositive(double number) {
+    public void isNumberInLimitPositiveTest(double number) {
         boolean actual = arithmeticValidator.isNumberInLimit(number);
         assertTrue(actual);
     }
@@ -100,7 +100,7 @@ public class ArithmeticValidatorTest {
     }
 
     @Test(dataProvider = "isNumberInLimitNegativeData")
-    public void testIsNumberInLimitNegative(double number) {
+    public void isNumberInLimitNegativeTest(double number) {
         boolean actual = arithmeticValidator.isNumberInLimit(number);
         assertFalse(actual);
     }
@@ -115,7 +115,7 @@ public class ArithmeticValidatorTest {
     }
 
     @Test(dataProvider = "isNumberBetweenPositiveData")
-    public void testIsNumberBetweenPositive(double a, double b, double h) {
+    public void isNumberBetweenPositiveTest(double a, double b, double h) {
         boolean actual = arithmeticValidator.isNumberBetween(a, b, h);
         assertTrue(actual);
     }
@@ -130,7 +130,7 @@ public class ArithmeticValidatorTest {
     }
 
     @Test(dataProvider = "isNumberBetweenNegativeData")
-    public void testIsNumberBetweenNegative(double a, double b, double h) {
+    public void isNumberBetweenNegativeTest(double a, double b, double h) {
         boolean actual = arithmeticValidator.isNumberBetween(a, b, h);
         assertFalse(actual);
     }
@@ -145,7 +145,7 @@ public class ArithmeticValidatorTest {
     }
 
     @Test(dataProvider = "isArrayInLimitPositiveData")
-    public void testIsArrayInLimitPositive(int... arr) {
+    public void isArrayInLimitPositiveTest(int... arr) {
         boolean actual = arithmeticValidator.isArrayInLimit(arr);
         assertTrue(actual);
     }
@@ -160,7 +160,7 @@ public class ArithmeticValidatorTest {
     }
 
     @Test(dataProvider = "isArrayInLimitNegativeData")
-    public void testIsArrayInLimitNegative(int... arr) {
+    public void isArrayInLimitNegativeTest(int... arr) {
         boolean actual = arithmeticValidator.isArrayInLimit(arr);
         assertFalse(actual);
     }

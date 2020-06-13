@@ -11,7 +11,7 @@ public class ShapeService {
     public double getAreaOfInscribedSquare(
             double areaOfDescribedSquare) throws IncorrectDataException {
         ArithmeticValidator arithmeticValidator = new ArithmeticValidator();
-        if (arithmeticValidator.isNumberPositive(areaOfDescribedSquare)) {
+        if (!arithmeticValidator.isNumberPositive(areaOfDescribedSquare)) {
             throw new IncorrectDataException();
         }
         double side = sqrt(areaOfDescribedSquare);
@@ -22,11 +22,13 @@ public class ShapeService {
     // task 9
     public double[] getLengthAndSquareOfCircle(double radius) throws IncorrectDataException {
         ArithmeticValidator arithmeticValidator = new ArithmeticValidator();
-        if (arithmeticValidator.isNumberPositive(radius)) {
+        if (!arithmeticValidator.isNumberPositive(radius)) {
             throw new IncorrectDataException();
         }
         double length = calculateLengthOfCircle(radius);
         double square = calculateSquareOfCircle(radius);
+        length = getRoundedNumber(length);
+        square = getRoundedNumber(square);
         return new double[]{length, square};
     }
 
@@ -36,5 +38,9 @@ public class ShapeService {
 
     private double calculateSquareOfCircle(double radius) {
         return PI * pow(radius, 2);
+    }
+
+    private double getRoundedNumber(double number) {
+        return (int)(number * 100) / 100.;
     }
 }

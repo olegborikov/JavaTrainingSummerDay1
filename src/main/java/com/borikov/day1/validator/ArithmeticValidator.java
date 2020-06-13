@@ -3,7 +3,7 @@ package com.borikov.day1.validator;
 public class ArithmeticValidator {
     private static final int MAX_VALUE_INT = 1000;
     private static final int MIN_VALUE_INT = -1000;
-    private static final long MIN_VALUE_LONG = 100000000000L;
+    private static final long MIN_VALUE_LONG = 10000000000000L;
 
     public boolean isNumberPositive(double number) {
         boolean check = false;

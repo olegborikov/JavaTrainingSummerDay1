@@ -26,7 +26,7 @@ public class PointValidatorTest {
     }
 
     @Test(dataProvider = "isPointInLimitPositiveData")
-    public void testIsPointInLimitPositive(double x, double y) {
+    public void isPointInLimitPositiveTest(double x, double y) {
         boolean actual = pointValidator.isPointInLimit(x, y);
         assertTrue(actual);
     }
@@ -41,7 +41,7 @@ public class PointValidatorTest {
     }
 
     @Test(dataProvider = "isPointInLimitNegativeData")
-    public void testIsPointInLimitNegative(double x, double y) {
+    public void isPointInLimitNegativeTest(double x, double y) {
         boolean actual = pointValidator.isPointInLimit(x, y);
         assertFalse(actual);
     }

@@ -10,7 +10,7 @@ public class NumberService {
     // task 1
     public int getLastNumberOfSquare(int number) throws IncorrectDataException {
         ArithmeticValidator arithmeticValidator = new ArithmeticValidator();
-        if (arithmeticValidator.isNumberInLimit(number)) {
+        if (!arithmeticValidator.isNumberInLimit(number)) {
             throw new IncorrectDataException();
         }
         int lastNumber = getLastNumber(number);
@@ -26,7 +26,7 @@ public class NumberService {
     // task 4
     public boolean isTwoNumbersEven(int... arr) throws IncorrectDataException {
         ArithmeticValidator arithmeticValidator = new ArithmeticValidator();
-        if (arithmeticValidator.isArrayInLimit(arr) && arr.length >= 4) {
+        if (!(arithmeticValidator.isArrayInLimit(arr) && arr.length >= 4)) {
             throw new IncorrectDataException();
         }
         int result = 0;
@@ -37,17 +37,21 @@ public class NumberService {
     }
 
     private int isNumberEven(int number) {
-        return number % 2;
+        int result = 0;
+        if(number %2 == 0){
+            result = 1;
+        }
+        return result;
     }
 
     // task 5
-    public boolean isNumberPerfect(int number) throws IncorrectDataException {
+    public boolean isNumberPerfect(long number) throws IncorrectDataException {
         ArithmeticValidator arithmeticValidator = new ArithmeticValidator();
-        if (arithmeticValidator.isLongNumberPositive(number)) {
+        if (!arithmeticValidator.isLongNumberPositive(number)) {
             throw new IncorrectDataException();
         }
-        int sum = 0;
-        for (int i = 1; i < number; i++) {
+        long sum = 0;
+        for (long i = 1; i < number; i++) {
             if (number % i == 0) {
                 sum += i;
             }

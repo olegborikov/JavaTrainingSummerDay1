@@ -25,7 +25,7 @@ public class TimeValidatorTest {
     }
 
     @Test(dataProvider = "isSecondsInLimitPositiveData")
-    public void testIsSecondsInLimitPositive(int seconds) {
+    public void isSecondsInLimitPositiveTest(int seconds) {
         boolean actual = timeValidator.isSecondsInLimit(seconds);
         assertTrue(actual);
     }
@@ -40,7 +40,7 @@ public class TimeValidatorTest {
     }
 
     @Test(dataProvider = "isSecondsInLimitNegativeData")
-    public void testIsSecondsInLimitNegative(int seconds) {
+    public void isSecondsInLimitNegativeTest(int seconds) {
         boolean actual = timeValidator.isSecondsInLimit(seconds);
         assertFalse(actual);
     }
@@ -55,7 +55,7 @@ public class TimeValidatorTest {
     }
 
     @Test(dataProvider = "isYearInLimitPositiveData")
-    public void testIsYearInLimitPositive(int year) {
+    public void isYearInLimitPositiveTest(int year) {
         boolean actual = timeValidator.isYearInLimit(year);
         assertTrue(actual);
     }
@@ -70,7 +70,7 @@ public class TimeValidatorTest {
     }
 
     @Test(dataProvider = "isYearInLimitNegativeData")
-    public void testIsYearInLimitNegative(int year) {
+    public void isYearInLimitNegativeTest(int year) {
         boolean actual = timeValidator.isYearInLimit(year);
         assertFalse(actual);
     }
@@ -85,7 +85,7 @@ public class TimeValidatorTest {
     }
 
     @Test(dataProvider = "isMonthInLimitPositiveData")
-    public void testIsMonthInLimitPositive(int month) {
+    public void isMonthInLimitPositiveTest(int month) {
         boolean actual = timeValidator.isMonthInLimit(month);
         assertTrue(actual);
     }
@@ -100,7 +100,7 @@ public class TimeValidatorTest {
     }
 
     @Test(dataProvider = "isMonthInLimitNegativeData")
-    public void testIsMonthInLimitNegative(int month) {
+    public void isMonthInLimitNegativeTest(int month) {
         boolean actual = timeValidator.isMonthInLimit(month);
         assertFalse(actual);
     }
