@@ -63,7 +63,7 @@ public class ArithmeticValidatorTest {
     @DataProvider(name = "isLongNumberPositiveFalseData")
     public Object[][] createIsLongNumberPositiveFalseData() {
         return new Object[][]{
-                {100000000000L},
+                {10000000000000000L},
                 {0},
                 {-301}
         };

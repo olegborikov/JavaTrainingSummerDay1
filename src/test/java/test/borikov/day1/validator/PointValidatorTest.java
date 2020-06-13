@@ -1,6 +1,5 @@
 package test.borikov.day1.validator;
 
-import com.borikov.day1.entity.Point;
 import com.borikov.day1.validator.PointValidator;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
